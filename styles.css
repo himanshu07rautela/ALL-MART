@@ -6,10 +6,6 @@ body {
   color: #000080; /* Navy text */
 }
 
-header, nav, main, footer {
-  padding: 20px;
-}
-
 header {
   background-image: url('blue-background4.png');
   background-size: cover;
@@ -190,6 +186,18 @@ footer {
   color: #000080; /* Navy text */
 }
 
+@media (max-width: 1200px) {
+  .card {
+    width: calc(33.333% - 20px); /* Three cards in a row for larger screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .card {
+    width: calc(50% - 20px); /* Two cards in a row for tablet screens */
+  }
+}
+
 @media (max-width: 768px) {
   .menu-icon {
     display: block;
@@ -215,6 +223,6 @@ footer {
   }
 
   .card {
-    width: calc(50% - 20px); /* Two cards in a row for smaller screens */
+    width: calc(100% - 20px); /* One card in a row for mobile screens */
   }
 }
