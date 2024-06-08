@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce Website</title>
+  <link rel="stylesheet" href="./E-Commerce Website_files/styles.css">
+  <link rel="stylesheet" href="./E-Commerce Website_files/css">
+  <link rel="stylesheet" href="./E-Commerce Website_files/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>ALL MART</h1>
+      <p>by -Thread-arc corporation</p>
+    </div>
+  </header>
+  
+  <nav>
+    <div class="nav-container">
+      
+      <div class="menu-icon">
+        <i class="fas fa-bars"></i>
+      </div>
+      
+      <ul>
+        <li><a href="http://127.0.0.1:5500/about.html">Home</a></li>
+        <li><a href="http://127.0.0.1:5500/index.html#products">Products</a></li>
+        <li><a href="http://127.0.0.1:5500/index.html#contact">Contact</a></li>
+        <li><a href="http://127.0.0.1:5500/campus.html">Campus</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <main>
+    <section id="home">
+      <h2>Welcome to Our E-Commerce Store</h2>
+      <p>Choose your items and select your preferred time slot and location for delivery.</p>
+    </section>
+    <section id="products">
+      <h2>Products</h2>
+      <div class="card-container">
+        <div class="card">
+          <img src="./E-Commerce Website_files/clothing1.jpeg" alt="Grocery">
+          <div class="card-content">
+            <h3>Clothing</h3>
+            <p>Explore our wide range of Clothing</p>
+            <a href="http://127.0.0.1:5500/index.html#">Shop Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./E-Commerce Website_files/stationary.jpg" alt="Stationary">
+          <div class="card-content">
+            <h3>Stationary</h3>
+            <p>Find all your stationary needs here.</p>
+            <a href="http://127.0.0.1:5500/index.html#">Shop Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./E-Commerce Website_files/gifts.jpeg" alt="Foods">
+          <div class="card-content">
+            <h3>Gifts</h3>
+            <p>Get the perfect for your Friends</p>
+            <a href="http://127.0.0.1:5500/index.html#">Shop Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./E-Commerce Website_files/gifts.jpeg" alt="Foods">
+          <div class="card-content">
+            <h3>Gifts</h3>
+            <p>Get the perfect for your Friends</p>
+            <a href="http://127.0.0.1:5500/index.html#">Shop Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./E-Commerce Website_files/gifts.jpeg" alt="Foods">
+          <div class="card-content">
+            <h3>Gifts</h3>
+            <p>Get the perfect for your Friends</p>
+            <a href="http://127.0.0.1:5500/index.html#">Shop Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./E-Commerce Website_files/gifts.jpeg" alt="Foods">
+          <div class="card-content">
+            <h3>Gifts</h3>
+            <p>Get the perfect for your Friends</p>
+            <a href="http://127.0.0.1:5500/index.html#">Shop Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>You can contact us directly:</p>
+      <p>Email: <a href="mailto:rohitharris01072003@gmail.com">rohitharris01072003@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/himanshu07rautela">himanshu07rautela</a></p>
+      <p>Feel free to reach out to us with any questions, feedback, or inquiries. We're here to help!</p>
+    </section>
+    
+  </main>
+  
+  <footer>
+    <div class="footer-content">
+      <p>© 2024 ALL-MART. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/himanshu07rautela" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/himanshu_07_rautela" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="http://127.0.0.1:5500/index.html#"><i class="fas fa-heart"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuIcon = document.querySelector('.menu-icon');
+    const navUl = document.querySelector('nav ul');
+
+    menuIcon.addEventListener('click', () => {
+      navUl.classList.toggle('show');
+    });
+  </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>

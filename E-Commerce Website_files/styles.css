@@ -2,8 +2,8 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f0f8ff; /* Light blue background */
-  color: #000080; /* Navy text */
+  background-color: #1e1e1e;
+  color: #e0e0e0;
 }
 
 header, nav, main, footer {
@@ -11,17 +11,15 @@ header, nav, main, footer {
 }
 
 header {
-  background-image: url('blue-background4.png');
+  background-image: url('dark background.png');
   background-size: cover;
   background-position: center;
   color: #fff;
-  padding: 70px 20px; /* Increase header size */
+  padding: 50px 20px;
   text-align: center;
   position: relative;
   overflow: hidden;
-  height: 1.75 times; /* Increased height */
 }
-
 
 .header-content {
   max-width: 800px;
@@ -32,11 +30,14 @@ header {
 
 header h1 {
   font-family: 'Arial', sans-serif;
-  font-size: 4rem; /* Increase header title size */
+  font-size: 3.5rem;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #fff;
+  background: linear-gradient(90deg, #ff6e7f, #bfe9ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textGradient 3s ease-in-out infinite;
 }
 
 header p {
@@ -45,8 +46,20 @@ header p {
   line-height: 1.5;
 }
 
+@keyframes textGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 nav {
-  background-color: #1e90ff; /* Dodger blue background */
+  background-color: #333;
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -57,6 +70,12 @@ nav {
   z-index: 1000;
 }
 
+.logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
 .menu-icon {
   display: none;
   cursor: pointer;
@@ -64,7 +83,6 @@ nav {
 
 .menu-icon i {
   font-size: 2.5rem;
-  color: #fff;
 }
 
 nav ul {
@@ -91,7 +109,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #1e90ff;
+  color: #333;
   background-color: #fff;
   border-radius: 5px;
   transform: scale(1.1);
@@ -104,7 +122,7 @@ main {
 section {
   margin-bottom: 30px;
   padding: 20px;
-  background-color: #87cefa; /* Light sky blue */
+  background-color: #2a2a2a;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s, box-shadow 0.3s;
@@ -118,17 +136,22 @@ section:hover {
 section h2 {
   font-size: 2.5rem;
   margin-bottom: 15px;
-  color: #000080; /* Navy text */
+  color: #ff6e7f;
 }
 
 section p {
   font-size: 1.2rem;
   line-height: 1.6;
-  color: #000080; /* Navy text */
+  color: #bfe9ff;
+}
+
+section#contact p {
+  font-size: 1.1rem;
+  color: #fff;
 }
 
 footer {
-  background-color: #1e90ff; /* Dodger blue background */
+  background-color: #333;
   color: #fff;
   text-align: center;
   padding: 20px;
@@ -154,13 +177,12 @@ footer {
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
+  justify-content: space-around;
 }
 
 .card {
-  width: calc(30% - 20px); /* Smaller card size */
-  background-color: #fff;
+  width: 300px;
+  background-color: #2c2c2c;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   margin-bottom: 20px;
@@ -183,11 +205,11 @@ footer {
 
 .card h3 {
   margin-top: 0;
-  color: #1e90ff; /* Dodger blue text */
+  color: #ff6e7f;
 }
 
 .card p {
-  color: #000080; /* Navy text */
+  color: #bfe9ff;
 }
 
 @media (max-width: 768px) {
@@ -199,7 +221,7 @@ footer {
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: #1e90ff;
+    background-color: #333;
     position: absolute;
     top: 70px;
     left: 0;
@@ -212,9 +234,5 @@ footer {
   nav ul li {
     text-align: center;
     padding: 10px 0;
-  }
-
-  .card {
-    width: calc(50% - 20px); /* Two cards in a row for smaller screens */
   }
 }
